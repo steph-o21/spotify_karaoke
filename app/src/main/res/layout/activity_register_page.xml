@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/registerPageButton"
         android:layout_width="104dp"
         android:layout_height="42dp"
         android:layout_marginTop="12dp"
