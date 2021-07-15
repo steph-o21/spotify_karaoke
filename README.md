@@ -33,6 +33,6 @@ The goal of this project is to develop a mobile and web application that allows 
 
 ## Proposed APIs
 #### [Spotify API](https://developer.spotify.com/documentation/web-api/)
-#### [Genius API0](https://docs.genius.com/)
+#### [Genius API](https://docs.genius.com/)
 #### [LyricsGenius API](https://lyricsgenius.readthedocs.io/en/master/)
 #### [Audio DB API](https://rapidapi.com/theaudiodb/api/theaudiodb) 
