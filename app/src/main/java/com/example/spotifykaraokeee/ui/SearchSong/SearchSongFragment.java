@@ -24,7 +24,7 @@ public class SearchSongFragment extends Fragment {
                 new ViewModelProvider(this).get(SearchSongViewModel.class);
         View root = inflater.inflate(R.layout.fragment_search_song, container, false);
         //originally was a dashboard fragment, changed name to search song fragment
-        final TextView textView = root.findViewById(R.id.text_dashboard);
+        final TextView textView = root.findViewById(R.id.text_search_song);
         searchSongViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

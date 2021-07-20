@@ -24,7 +24,7 @@ public class UserProfileFragment extends Fragment {
                 new ViewModelProvider(this).get(UserProfileViewModel.class);
         View root = inflater.inflate(R.layout.fragment_user_profile, container, false);
         //originally a notifications fragment. changed to user profile fragment
-        final TextView textView = root.findViewById(R.id.text_notifications);
+        final TextView textView = root.findViewById(R.id.text_user_profile);
         userProfileViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
