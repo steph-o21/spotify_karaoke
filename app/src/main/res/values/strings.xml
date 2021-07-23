@@ -11,5 +11,6 @@
     <string name="title_home"></string>
     <string name="title_song_search"></string>
     <string name="title_user_profile"></string>
+    <string name="lyrics"></string>
 
 </resources>
