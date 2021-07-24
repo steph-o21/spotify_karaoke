@@ -15,9 +15,7 @@ import android.widget.ImageView;
 import com.spotify.android.appremote.api.ConnectionParams;
 import com.spotify.android.appremote.api.Connector;
 import com.spotify.android.appremote.api.SpotifyAppRemote;
-import com.spotify.*;
-import com.spotify.protocol.client.Subscription;
-import com.spotify.protocol.types.PlayerState;
+
 import com.spotify.protocol.types.Track;
 import com.spotify.sdk.android.authentication.AuthenticationClient;
 import com.spotify.sdk.android.authentication.AuthenticationRequest;
@@ -35,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
     // Set up Spotify Credentials
     private static final int REQUEST_CODE = 1337;
-    private static final String CLIENT_ID = "your_client_id";
+    //our clientID from our developer dashboard
+    private static final String CLIENT_ID = "b6cb228259164dabab54198bf1537a75";
+    //also had to set this as our redirect URI in our developer dashboard
     private static final String REDIRECT_URI = "http://com.yourdomain.yourapp/callback";
     private SpotifyAppRemote mSpotifyAppRemote;
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
+        //authenticates through spotify client
         LogIn();
 
         //sets no title and makes splash screen into full screen
@@ -85,35 +85,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onStart() {
-        super.onStart();
-        //
-        ConnectionParams connectionParams =
-                new ConnectionParams.Builder(CLIENT_ID)
-                        .setRedirectUri(REDIRECT_URI)
-                        .showAuthView(true)
-                        .build();
-
-        SpotifyAppRemote.connect(this, connectionParams, new Connector.ConnectionListener() {
-            @Override
-            public void onConnected(SpotifyAppRemote spotifyAppRemote) {
-                mSpotifyAppRemote = spotifyAppRemote;
-                Log.d("MainActivity", "Connected! Yay!");
-
-                // Now you can start interacting with App Remote
-                connected();
-
-            }
-
-            @Override
-            public void onFailure(Throwable error) {
-                // Something went wrong if you go here!
-                Log.e("MyActivity", error.getMessage(), error); // edited from throwable.getMessage()
-            }
-        });
-    }
-
-    @Override
     protected void onStop() {
         super.onStop();
         SpotifyAppRemote.disconnect(mSpotifyAppRemote);
@@ -126,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
         // Check if result comes from the correct activity
         if (requestCode == REQUEST_CODE) {
             AuthenticationResponse response = AuthenticationClient.getResponse(resultCode, intent);
-
 
             switch (response.getType()) {
                 // Response was successful and contains auth token
@@ -145,21 +115,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
-    // Connected functionality for remote play
-    private void connected() {
-        mSpotifyAppRemote.getPlayerApi().play("spotify:playlist:37i9dQZF1DX2sUQwD7tbmL");
-
-        mSpotifyAppRemote.getPlayerApi()
-                .subscribeToPlayerState()
-                .setEventCallback(playerState -> {
-                    final Track track = playerState.track;
-                    if (track != null) {
-                        Log.d("MainActively", track.name + "by + " + track.artist.name);
-                    }
-                });
-    }
-
     // Set up Spotify Auth Logging in
     private void LogIn() {
         AuthenticationRequest.Builder builder =
@@ -171,12 +126,8 @@ public class MainActivity extends AppCompatActivity {
         AuthenticationRequest request = builder.build();
         AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
     }
-
     // Set Up Spotify Auth Logging Out
     private void LogOut() {
 
     }
-
-
-
 }

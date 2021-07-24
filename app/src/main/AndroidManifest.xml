@@ -12,10 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SpotifyKaraokeee">
-
-        <activity android:name=".LyricDisplayPage"></activity>
-        <activity android:name=".EntryPage" />
-
         <activity
             android:name="com.spotify.sdk.android.authentication.LoginActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
@@ -39,10 +35,10 @@
                     android:scheme="yourcustomprotocol"/>
             </intent-filter>
 
-            <intent-filter>
-                // Other intent filters this activity requires
-            </intent-filter>
+
         </activity>
+        <activity android:name=".LyricDisplayPage"></activity>
+        <activity android:name=".EntryPage" />
         <activity android:name=".RegisterPage" />
         <activity android:name=".LogInPage" />
         <activity
