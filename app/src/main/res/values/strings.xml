@@ -11,6 +11,10 @@
     <string name="title_home"></string>
     <string name="title_song_search"></string>
     <string name="title_user_profile"></string>
-    <string name="lyrics"></string>
-
+    <string name="lyrics">hooooooooooooiiyeah</string>
+    <string name="song_title">A Moment Apart</string>
+    <string name="album_title">A Moment Apart</string>
+    <string name="current_time">0:00</string>
+    <string name="total_time">0:00</string>
+    <string name="artist_name">O D E S Z A</string>
 </resources>
