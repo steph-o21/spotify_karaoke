@@ -5,11 +5,21 @@ import androidx.core.app.ActivityOptionsCompat;
 
 import android.os.Bundle;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import com.spotify.android.appremote.api.ConnectionParams;
+import com.spotify.android.appremote.api.Connector;
+import com.spotify.android.appremote.api.SpotifyAppRemote;
+
+import com.spotify.protocol.types.Track;
+import com.spotify.sdk.android.authentication.AuthenticationClient;
+import com.spotify.sdk.android.authentication.AuthenticationRequest;
+import com.spotify.sdk.android.authentication.AuthenticationResponse;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,9 +31,21 @@ public class MainActivity extends AppCompatActivity {
     //allows us to transition to next screen
     private Thread mSplashThread;
 
+    // Set up Spotify Credentials
+    private static final int REQUEST_CODE = 1337;
+    //our clientID from our developer dashboard
+    private static final String CLIENT_ID = "b6cb228259164dabab54198bf1537a75";
+    //also had to set this as our redirect URI in our developer dashboard
+    private static final String REDIRECT_URI = "http://com.yourdomain.yourapp/callback";
+    private SpotifyAppRemote mSpotifyAppRemote;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //authenticates through spotify client
+        LogIn();
 
         //sets no title and makes splash screen into full screen
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -62,4 +84,50 @@ public class MainActivity extends AppCompatActivity {
         mSplashThread.start();
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        SpotifyAppRemote.disconnect(mSpotifyAppRemote);
+    }
+
+    // returns activity result from request and intent
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+
+        // Check if result comes from the correct activity
+        if (requestCode == REQUEST_CODE) {
+            AuthenticationResponse response = AuthenticationClient.getResponse(resultCode, intent);
+
+            switch (response.getType()) {
+                // Response was successful and contains auth token
+                case TOKEN:
+                    // Handle successful response
+                    break;
+
+                // Auth flow returned an error
+                case ERROR:
+                    // Handle error response
+                    break;
+
+                // Most likely auth flow was cancelled
+                default:
+                    // Handle other cases
+            }
+        }
+    }
+    // Set up Spotify Auth Logging in
+    private void LogIn() {
+        AuthenticationRequest.Builder builder =
+                new AuthenticationRequest.Builder(CLIENT_ID,
+                        AuthenticationResponse.Type.TOKEN,
+                        REDIRECT_URI);
+
+        builder.setScopes(new String[]{"streaming"});
+        AuthenticationRequest request = builder.build();
+        AuthenticationClient.openLoginActivity(this, REQUEST_CODE, request);
+    }
+    // Set Up Spotify Auth Logging Out
+    private void LogOut() {
+
+    }
 }
