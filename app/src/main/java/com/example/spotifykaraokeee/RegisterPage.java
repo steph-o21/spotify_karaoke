@@ -73,7 +73,7 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
                     RegisterPage.this.showToast("Authentication failed. " + task.getException());
                 }
                 else {
-                    RegisterPage.this.startActivity(new Intent(RegisterPage.this, NavigationHomePage.class));
+                    RegisterPage.this.startActivity(new Intent(RegisterPage.this, LogInPage.class));
                     RegisterPage.this.finish();
                 }
             }

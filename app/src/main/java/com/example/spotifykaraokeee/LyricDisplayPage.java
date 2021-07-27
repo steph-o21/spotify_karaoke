@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.spotify.android.appremote.api.ConnectionParams;
 import com.spotify.android.appremote.api.Connector;
 import com.spotify.android.appremote.api.SpotifyAppRemote;
@@ -66,6 +67,9 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
     String totalPlaybackTime;
 
     ImageView albumCover;
+
+    FirebaseAuth auth = FirebaseAuth.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -280,6 +284,9 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
         }
         //when the return button is clicked
         if(v.getId()==R.id.return_button){
+
+            mSpotifyAppRemote.getPlayerApi().pause();
+            finish();
 
         }
     }

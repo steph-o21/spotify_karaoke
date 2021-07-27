@@ -8,6 +8,23 @@
     android:background = "@color/black"
     android:id ="@+id/lyric_display">
 
+
+
+
+    <ImageButton
+        android:id="@+id/comment_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/ic_baseline_comment_24"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toEndOf="@+id/artist_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
     <LinearLayout
         android:id="@+id/album_frame"
         android:layout_width="wrap_content"
@@ -161,6 +178,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/synced_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:background="@drawable/ic_baseline_check_circle_outline_24"
+            android:backgroundTint="@color/white" />
         <ImageButton
             android:id="@+id/previous_button"
             android:layout_width="wrap_content"
@@ -179,6 +204,14 @@
             android:layout_height="wrap_content"
             android:layout_margin="30dp"
             android:background="@drawable/next_button" />
+        <ImageButton
+            android:id="@+id/recording_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:background="@drawable/ic_baseline_radio_button_unchecked_24"
+            android:backgroundTint="@color/white"
+             />
     </LinearLayout>
 
 
