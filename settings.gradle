@@ -1,3 +1,0 @@
-include ':spotify-app-remote-release-0.7.2'
-include ':app'
-rootProject.name = "Spotify Karaokeee"
