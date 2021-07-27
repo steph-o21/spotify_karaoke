@@ -208,7 +208,6 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
                     }
                 });
             }
-
         });
     }
 
@@ -228,7 +227,6 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
         //sets the current playback time to our text view object
         currentTime.setText(currentPlaybackTime);
     }
-
     private String convertFormat(int duration){
         String timerLabel = "";
         int min = duration/1000/60;

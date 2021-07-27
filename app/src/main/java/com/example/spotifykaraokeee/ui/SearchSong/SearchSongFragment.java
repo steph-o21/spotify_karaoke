@@ -13,7 +13,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.spotifykaraokeee.MainActivity;
 import com.example.spotifykaraokeee.R;
+import com.spotify.sdk.android.authentication.AuthenticationClient;
+import com.spotify.sdk.android.authentication.AuthenticationResponse;
 
 import java.util.List;
 
@@ -22,48 +25,58 @@ import kaaes.spotify.webapi.android.SpotifyCallback;
 import kaaes.spotify.webapi.android.SpotifyError;
 import kaaes.spotify.webapi.android.SpotifyService;
 import kaaes.spotify.webapi.android.models.Track;
+import kaaes.spotify.webapi.android.models.Tracks;
 import kaaes.spotify.webapi.android.models.TracksPager;
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
 public class SearchSongFragment extends Fragment {
+
+    //access token taken from main activity after spotify authentication
+    public String access_token1;
+
+
 
     private SearchSongViewModel searchSongViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        searchSongViewModel =
-                new ViewModelProvider(this).get(SearchSongViewModel.class);
+
+        searchSongViewModel = new ViewModelProvider(this).get(SearchSongViewModel.class);
         View root = inflater.inflate(R.layout.fragment_search_song, container, false);
-        //originally was a dashboard fragment, changed name to search song fragment
-        final TextView textView = root.findViewById(R.id.text_search_song);
-        searchSongViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
 
-        /*
-        String song_title = "Love never felt so good";
+        //song title
+        String song_title = "All we need";
 
+        //initialize access token string
+        access_token1 = (MainActivity.access_token);
+
+        //spotify web api
         SpotifyApi api = new SpotifyApi();
-
-        api.setAccessToken();
-
+        api.setAccessToken(access_token1);
         SpotifyService spotify = api.getService();
-
-        spotify.searchTracks(song_title, new SpotifyCallback<TracksPager>() {
+        //search song by song title
+        spotify.searchTracks(song_title, new Callback<TracksPager>() {
             @Override
-            public void success(TracksPager tracksPager, retrofit.client.Response response) {
-               List<Track> songs = tracksPager.tracks.items;
-                //System.out.print(songs);
+            public void success(TracksPager tracks, Response response) {
+
+                Log.d("sucesss", ("size: " + tracks.tracks.items.size()));
+
+                for(int i = 0; i<tracks.tracks.items.size();i++){
+                    Log.d("song:", tracks.tracks.items.get(i).name);
+                }
             }
 
             @Override
-            public void failure(SpotifyError spotifyError) {
-                Log.d("Track failure", spotifyError.toString());
+            public void failure(RetrofitError error) {
+                Log.d("u failed homie", error.toString());
             }
         });
-        */
+
+
+
+
+        return root;
     }
 }

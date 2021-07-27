@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String REDIRECT_URI = "http://com.yourdomain.yourapp/callback";
     private SpotifyAppRemote mSpotifyAppRemote;
 
+    public static String access_token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
         // Check if result comes from the correct activity
         if (requestCode == REQUEST_CODE) {
             AuthenticationResponse response = AuthenticationClient.getResponse(resultCode, intent);
+
+            access_token = response.getAccessToken();
 
             switch (response.getType()) {
                 // Response was successful and contains auth token
