@@ -1,0 +1,310 @@
+[
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_home.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_user_profile.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_user_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_round_button.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\round_button.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_user_profile.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_user_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_log_in_page.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\layout\\activity_log_in_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_round_button.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\round_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_round_corner.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\round_corner.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_entry_page.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\layout\\activity_entry_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_round_button.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\round_button.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_bi_search.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_bi_search.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_round_button.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\round_button.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_user_profile.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_user_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_bi_search.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_bi_search.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_user_profile.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\layout\\fragment_user_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_home.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_round_corner.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\round_corner.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_round_corner.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\round_corner.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_user_profile.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_user_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_rectangle.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\rectangle.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_home.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_rectangle.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\rectangle.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_round_corner.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\round_corner.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_home.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_bi_search.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_bi_search.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_rectangle.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\rectangle.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_home.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_navigation_home_page.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\layout\\activity_navigation_home_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_round_button.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\round_button.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_bi_search.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_bi_search.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_bi_search.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_bi_search.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_round_button.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\round_button.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_rectangle.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\rectangle.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_home.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_home.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_rectangle.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\rectangle.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_rectangle.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\rectangle.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\anim_top_animation.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\anim\\top_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_bi_search.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_bi_search.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_round_button.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\round_button.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_user_profile.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_user_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_search_song.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\layout\\fragment_search_song.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_rectangle.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\rectangle.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_user_profile.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_user_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_user_profile.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_user_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_bi_search.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_bi_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\anim_bottom_animation.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\anim\\bottom_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_round_corner.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\round_corner.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_round_corner.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\round_corner.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_register_page.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\layout\\activity_register_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_round_corner.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\round_corner.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ellipse_1.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\drawable\\ellipse_1.png"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\src\\main\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_home.png.flat",
+        "source": "C:\\Users\\amrit\\StudioProjects\\spotify_karaoke\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_home.png"
+    }
+]

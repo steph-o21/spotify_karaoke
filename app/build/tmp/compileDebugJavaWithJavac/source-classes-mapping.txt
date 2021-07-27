@@ -1,0 +1,28 @@
+com/example/spotifykaraokeee/ui/SearchSong/SearchSongViewModel.java
+ com.example.spotifykaraokeee.ui.SearchSong.SearchSongViewModel
+com/example/spotifykaraokeee/NavigationHomePage.java
+ com.example.spotifykaraokeee.NavigationHomePage
+com/example/spotifykaraokeee/ui/SearchSong/SearchSongFragment.java
+ com.example.spotifykaraokeee.ui.SearchSong.SearchSongFragment
+ com.example.spotifykaraokeee.ui.SearchSong.SearchSongFragment$1
+com/example/spotifykaraokeee/BuildConfig.java
+ com.example.spotifykaraokeee.BuildConfig
+com/example/spotifykaraokeee/RegisterPage.java
+ com.example.spotifykaraokeee.RegisterPage
+com/example/spotifykaraokeee/ui/home/HomeFragment.java
+ com.example.spotifykaraokeee.ui.home.HomeFragment
+ com.example.spotifykaraokeee.ui.home.HomeFragment$1
+com/example/spotifykaraokeee/ui/UserProfile/UserProfileViewModel.java
+ com.example.spotifykaraokeee.ui.UserProfile.UserProfileViewModel
+com/example/spotifykaraokeee/MainActivity.java
+ com.example.spotifykaraokeee.MainActivity
+ com.example.spotifykaraokeee.MainActivity$1
+com/example/spotifykaraokeee/ui/home/HomeViewModel.java
+ com.example.spotifykaraokeee.ui.home.HomeViewModel
+com/example/spotifykaraokeee/EntryPage.java
+ com.example.spotifykaraokeee.EntryPage
+com/example/spotifykaraokeee/LogInPage.java
+ com.example.spotifykaraokeee.LogInPage
+com/example/spotifykaraokeee/ui/UserProfile/UserProfileFragment.java
+ com.example.spotifykaraokeee.ui.UserProfile.UserProfileFragment
+ com.example.spotifykaraokeee.ui.UserProfile.UserProfileFragment$1
