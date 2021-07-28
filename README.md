@@ -5,7 +5,7 @@
 The goal of this project is to develop a mobile and web application that allows users to link their Spotify accounts, search for a desired song, and sing along to the lyrics as they appear on the screen.
 
 ## Curent Working Demo:
-https://youtu.be/69T9d2Ni26c
+https://youtu.be/CEyYxzh0lBI
 
 ### App Screens
 - Sign In Screen
