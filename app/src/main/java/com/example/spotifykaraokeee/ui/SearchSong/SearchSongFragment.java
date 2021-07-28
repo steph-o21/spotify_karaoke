@@ -56,6 +56,7 @@ public class SearchSongFragment extends Fragment {
         SpotifyApi api = new SpotifyApi();
         api.setAccessToken(access_token1);
         SpotifyService spotify = api.getService();
+
         //search song by song title
         spotify.searchTracks(song_title, new Callback<TracksPager>() {
             @Override

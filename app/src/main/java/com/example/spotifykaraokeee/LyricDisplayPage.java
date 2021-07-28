@@ -52,6 +52,10 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
     ImageButton previousButton;
     //return to homepage button
     ImageButton returnButton;
+    //more playback buttons
+    ImageButton recordButton;
+    ImageButton syncedButton;
+    ImageButton commentButton;
 
     SeekBar ourSeekBar;
     Handler handler = new Handler();
@@ -67,6 +71,9 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
     String totalPlaybackTime;
 
     ImageView albumCover;
+
+    boolean isRecording=false;
+    boolean isSynced=false;
 
     FirebaseAuth auth = FirebaseAuth.getInstance();
 
@@ -84,6 +91,11 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
         nextButton = (ImageButton)findViewById(R.id.next_button);
         previousButton = (ImageButton)findViewById(R.id.previous_button);
         returnButton = (ImageButton)findViewById(R.id.return_button);
+        recordButton = (ImageButton)findViewById(R.id.recording_button);
+        syncedButton = (ImageButton)findViewById(R.id.synced_button);
+        commentButton = (ImageButton)findViewById(R.id.comment_button);
+
+        //our music progress bar
         ourSeekBar = (SeekBar)findViewById(R.id.music_bar);
 
         //our textView objects
@@ -104,6 +116,9 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
         nextButton.setOnClickListener(this);
         previousButton.setOnClickListener(this);
         returnButton.setOnClickListener(this);
+        recordButton.setOnClickListener(this);
+        syncedButton.setOnClickListener(this);
+        commentButton.setOnClickListener(this);
 
         //string that holds song uri
         String song_uri = "spotify:playlist:37i9dQZF1DX2sUQwD7tbmL";
@@ -172,6 +187,9 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
     private void startSong(String song_uri) {
         //plays default song from playlist in quick start guide
         mSpotifyAppRemote.getPlayerApi().play(song_uri);
+
+        //when song is played, set the play button to be the pause button drawable
+        playButton.setBackgroundResource(R.drawable.ic_baseline_pause_circle);
 
         LyricDisplayPage.this.runOnUiThread (new Runnable(){
             @Override
@@ -258,6 +276,7 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
     //overridden onClick method to give function to playback buttons
     @Override
     public void onClick(View v) {
+        //PLAY BUTTON
         if(v.getId()==R.id.play_button){
             //gets the current player state
             mSpotifyAppRemote.getPlayerApi().getPlayerState().setResultCallback(playerState ->{
@@ -265,26 +284,58 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
                 //if song is already paused, resume the song
                 if(paused == true){
                     mSpotifyAppRemote.getPlayerApi().resume();
+                    //when song is resumed, play button will be the pause button drawable
+                    playButton.setBackgroundResource(R.drawable.ic_baseline_pause_circle);
                 }
                 //if song is already playing, pause the song
                 else if(paused == false){
                     mSpotifyAppRemote.getPlayerApi().pause();
+                    //when song is paused, play button will be the play button drawable
+                    playButton.setBackgroundResource(R.drawable.ic_baseline_play_circle);
                 }
             });
         }
+        //NEXT BUTTON
         //when skip next button is clicked
         if(v.getId()==R.id.next_button){
             mSpotifyAppRemote.getPlayerApi().skipNext();
         }
+        //PREVIOUS BUTTON
         //when skip previous button is clicked
         if(v.getId()==R.id.previous_button){
             mSpotifyAppRemote.getPlayerApi().skipPrevious();
         }
-        //when the return button is clicked
+        //RETURN BUTTON
         if(v.getId()==R.id.return_button){
-
             mSpotifyAppRemote.getPlayerApi().pause();
+            //when song is paused, play button will be the play button drawable
+            playButton.setBackgroundResource(R.drawable.ic_baseline_play_circle);
             finish();
+        }
+        //RECORDING BUTTON
+        if(v.getId()==R.id.recording_button){
+            if(isRecording==false) {
+                recordButton.setBackgroundResource(R.drawable.ic_baseline_radio_button_checked_24);
+                isRecording = true;
+            }
+            else if(isRecording==true) {
+                recordButton.setBackgroundResource(R.drawable.ic_baseline_radio_button_unchecked_24);
+                isRecording = false;
+            }
+        }
+        //LYRICS SYNCED BUTTON
+        if(v.getId()==R.id.synced_button){
+            if(isSynced==false) {
+                syncedButton.setBackgroundResource(R.drawable.ic_baseline_check_circle_24);
+                isSynced = true;
+            }
+            else if(isSynced==true) {
+                syncedButton.setBackgroundResource(R.drawable.ic_baseline_check_circle_outline_24);
+                isSynced = false;
+            }
+        }
+        //COMMENT BUTTON
+        if(v.getId()==R.id.comment_button){
 
         }
     }

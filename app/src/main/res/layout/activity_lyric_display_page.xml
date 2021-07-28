@@ -194,10 +194,10 @@
             android:background="@drawable/previous_button" />
         <ImageButton
             android:id="@+id/play_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_margin="23dp"
-            android:background="@drawable/ic_play_button" />
+            android:background="@drawable/ic_baseline_play_circle" />
         <ImageButton
             android:id="@+id/next_button"
             android:layout_width="wrap_content"
