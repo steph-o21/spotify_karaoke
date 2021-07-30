@@ -32,7 +32,7 @@ public class RegisterPage extends AppCompatActivity implements View.OnClickListe
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();//hides the action bar with title
-        setContentView(R.layout.activity_register_page);
+
 
         //our instance of our signUp button
         signUpButton = (Button)findViewById(R.id.registerPageButton);

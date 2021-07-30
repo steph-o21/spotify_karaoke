@@ -19,4 +19,5 @@
     <string name="artist_name">O D E S Z A</string>
     <string name="rec">Rec</string>
     <string name="synced">Synced</string>
+    <string name="time_suggestion">0:00</string>
 </resources>

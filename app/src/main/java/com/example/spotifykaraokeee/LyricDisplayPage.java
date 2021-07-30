@@ -2,18 +2,23 @@ package com.example.spotifykaraokeee;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.spotify.android.appremote.api.ConnectionParams;
@@ -57,6 +62,8 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
     ImageButton syncedButton;
     ImageButton commentButton;
 
+
+
     SeekBar ourSeekBar;
     Handler handler = new Handler();
 
@@ -74,6 +81,7 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
 
     boolean isRecording=false;
     boolean isSynced=false;
+    boolean isPaused;
 
     FirebaseAuth auth = FirebaseAuth.getInstance();
 
@@ -94,6 +102,7 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
         recordButton = (ImageButton)findViewById(R.id.recording_button);
         syncedButton = (ImageButton)findViewById(R.id.synced_button);
         commentButton = (ImageButton)findViewById(R.id.comment_button);
+
 
         //our music progress bar
         ourSeekBar = (SeekBar)findViewById(R.id.music_bar);
@@ -119,6 +128,11 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
         recordButton.setOnClickListener(this);
         syncedButton.setOnClickListener(this);
         commentButton.setOnClickListener(this);
+
+
+
+
+
 
         //string that holds song uri
         String song_uri = "spotify:playlist:37i9dQZF1DX2sUQwD7tbmL";
@@ -273,6 +287,61 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
             albumCover.setImageBitmap(artwork1);
         });
     }
+    public void showAlertDialogButtonClicked(View view) {
+        //pauses song when dialog box is shown
+        pauseSong();
+
+        // Create an alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Enter lyrics");
+        // set the custom layout
+        final View customLayout = getLayoutInflater().inflate(R.layout.time_suggestion_dialog_box, null);
+        builder.setView(customLayout);
+        // add a button
+        builder.setPositiveButton("Send",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // send data from the
+                        // AlertDialog to the Activity
+                        EditText editText = customLayout.findViewById(R.id.lyric_suggestion);
+                        sendToFireStore(editText.getText().toString());
+                        resumeSong();
+                    }
+                });
+        builder.setNegativeButton("Cancel",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // If user click no
+                        // then dialog box is canceled.
+                        dialog.cancel();
+                        resumeSong();
+                    }
+                });
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    //sends data to cloud firestore database
+    private void sendToFireStore(String data) {
+        //sends data to cloud firestore database
+        Log.d("tyvm :)", data);
+
+    }
+
+    private void resumeSong(){
+        mSpotifyAppRemote.getPlayerApi().resume();
+        //when song is resumed, play button will be the pause button drawable
+        playButton.setBackgroundResource(R.drawable.ic_baseline_pause_circle);
+    }
+    private void pauseSong(){
+        mSpotifyAppRemote.getPlayerApi().pause();
+        //when song is paused, play button will be the play button drawable
+        playButton.setBackgroundResource(R.drawable.ic_baseline_play_circle);
+    }
+
     //overridden onClick method to give function to playback buttons
     @Override
     public void onClick(View v) {
@@ -280,18 +349,14 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
         if(v.getId()==R.id.play_button){
             //gets the current player state
             mSpotifyAppRemote.getPlayerApi().getPlayerState().setResultCallback(playerState ->{
-                boolean paused = playerState.isPaused;
+                isPaused = playerState.isPaused;
                 //if song is already paused, resume the song
-                if(paused == true){
-                    mSpotifyAppRemote.getPlayerApi().resume();
-                    //when song is resumed, play button will be the pause button drawable
-                    playButton.setBackgroundResource(R.drawable.ic_baseline_pause_circle);
+                if(isPaused == true){
+                    resumeSong();
                 }
                 //if song is already playing, pause the song
-                else if(paused == false){
-                    mSpotifyAppRemote.getPlayerApi().pause();
-                    //when song is paused, play button will be the play button drawable
-                    playButton.setBackgroundResource(R.drawable.ic_baseline_play_circle);
+                else if(isPaused == false){
+                    pauseSong();
                 }
             });
         }
@@ -299,11 +364,13 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
         //when skip next button is clicked
         if(v.getId()==R.id.next_button){
             mSpotifyAppRemote.getPlayerApi().skipNext();
+            playButton.setBackgroundResource(R.drawable.ic_baseline_pause_circle);
         }
         //PREVIOUS BUTTON
         //when skip previous button is clicked
         if(v.getId()==R.id.previous_button){
             mSpotifyAppRemote.getPlayerApi().skipPrevious();
+            playButton.setBackgroundResource(R.drawable.ic_baseline_pause_circle);
         }
         //RETURN BUTTON
         if(v.getId()==R.id.return_button){

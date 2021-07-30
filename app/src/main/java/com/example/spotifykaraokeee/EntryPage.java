@@ -38,7 +38,7 @@ public class EntryPage extends AppCompatActivity implements View.OnClickListener
     public void onClick(View v) {
         final EntryPage entryPage = this;
         if(v.getId()==R.id.logInButton){
-            Intent intent = new Intent(entryPage, LogInPage.class);
+            Intent intent = new Intent(entryPage, NavigationHomePage.class);
             Bundle bundle = ActivityOptionsCompat.makeCustomAnimation(entryPage, android.R.anim.fade_in, android.R.anim.fade_out).toBundle();
             startActivity(intent, bundle);
         }
