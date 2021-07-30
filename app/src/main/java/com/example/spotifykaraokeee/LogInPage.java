@@ -80,7 +80,7 @@ public class LogInPage extends AppCompatActivity implements View.OnClickListener
                     }
                 }
                 else {//if the opposite of the task is not successful happened then the task must have been succesful, so that is why there successful auth is in the else
-                    Intent intent = new Intent(LogInPage.this, NavigationHomePage.class);//the user enterd the correct credentials and are authorized to enter the navigation page
+                    Intent intent = new Intent(LogInPage.this, LyricDisplayPage.class);//the user enterd the correct credentials and are authorized to enter the navigation page
                     startActivity(intent);
                     finish();
                 }

@@ -1,5 +1,6 @@
 package com.example.spotifykaraokeee;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -20,7 +21,16 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.core.Tag;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
+import com.google.type.DateTime;
 import com.spotify.android.appremote.api.ConnectionParams;
 import com.spotify.android.appremote.api.Connector;
 import com.spotify.android.appremote.api.SpotifyAppRemote;
@@ -30,6 +40,8 @@ import com.spotify.protocol.types.Track;
 
 import org.jetbrains.annotations.NotNull;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 
 import okhttp3.Call;
@@ -47,6 +59,7 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
     private static final String CLIENT_ID = "b6cb228259164dabab54198bf1537a75";
     //also had to set this as our redirect URI in our developer dashboard
     private static final String REDIRECT_URI = "http://com.yourdomain.yourapp/callback";
+
     private SpotifyAppRemote mSpotifyAppRemote;
 
     private final OkHttpClient client = new OkHttpClient();
@@ -62,8 +75,6 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
     ImageButton syncedButton;
     ImageButton commentButton;
 
-
-
     SeekBar ourSeekBar;
     Handler handler = new Handler();
 
@@ -76,6 +87,9 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
 
     String currentPlaybackTime;
     String totalPlaybackTime;
+    int secondsFromStart;
+    String trackName;
+    String trackArtist;
 
     ImageView albumCover;
 
@@ -84,7 +98,7 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
     boolean isPaused;
 
     FirebaseAuth auth = FirebaseAuth.getInstance();
-
+    FirebaseFirestore firestore = FirebaseFirestore.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -128,11 +142,6 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
         recordButton.setOnClickListener(this);
         syncedButton.setOnClickListener(this);
         commentButton.setOnClickListener(this);
-
-
-
-
-
 
         //string that holds song uri
         String song_uri = "spotify:playlist:37i9dQZF1DX2sUQwD7tbmL";
@@ -211,6 +220,9 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
                 mSpotifyAppRemote.getPlayerApi().getPlayerState().setResultCallback(playerState ->{
                     Track track = playerState.track;
                     if (track != null) {
+                        trackName = track.name;
+                        trackArtist = track.artist.name;
+                        secondsFromStart = (int)playerState.playbackPosition;
                         //passes in track name and artist name into displayLyrics method
                         displayLyrics(track.name, track.artist.name);
                         //sets song title, album title, and artist name to our text views
@@ -271,22 +283,25 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
         return timerLabel;
     }
     private void setSongTitle(String song_title){
+        trackName = song_title;
         //sets song title for textView
-        songTitle.setText(song_title);
+        songTitle.setText(trackName);
     }
     private void setAlbumTitle(String album_title){
         //sets album title for textView
         albumTitle.setText(album_title);
     }
     private void setArtistName(String artist_name){
+        trackArtist = artist_name;
         //sets artist name for textView
-        artistName.setText(artist_name.toUpperCase());
+        artistName.setText(trackArtist.toUpperCase());
     }
     private void setAlbumCover(ImageUri uri){
         mSpotifyAppRemote.getImagesApi().getImage(uri).setResultCallback(artwork1 -> {
             albumCover.setImageBitmap(artwork1);
         });
     }
+    //alert dialog box shown when time edit button is clicked
     public void showAlertDialogButtonClicked(View view) {
         //pauses song when dialog box is shown
         pauseSong();
@@ -324,11 +339,31 @@ public class LyricDisplayPage extends AppCompatActivity implements View.OnClickL
         dialog.show();
     }
 
-    //sends data to cloud firestore database
-    private void sendToFireStore(String data) {
+    //sends timeStamp suggestions given by users to cloud firestore database
+    private void sendToFireStore(String lyrics) {
         //sends data to cloud firestore database
-        Log.d("tyvm :)", data);
+        Log.d("tyvm :)", lyrics + "seconds:" + secondsFromStart);
 
+        Map<String, Object> timeStamps = new HashMap<>();
+        timeStamps.put("Artist", trackArtist);
+        timeStamps.put("SongTitle", trackName);
+        timeStamps.put("LyricalContent", lyrics);
+        timeStamps.put("SecondsFromStart", secondsFromStart/1000);
+
+        //adds Timestamp info to collection 'TimeStamps'
+         firestore.collection("TimeStamps").document(trackName)
+                  .collection("Suggestions").document(convertFormat(secondsFromStart))
+                  .set(timeStamps, SetOptions.merge()).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                Log.d("O YAH", "YERR");
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("O NO", "sorry my g");
+            }
+        });
     }
 
     private void resumeSong(){
