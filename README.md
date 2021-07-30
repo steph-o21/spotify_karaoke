@@ -1,11 +1,10 @@
 # Spotify Karaoke (Draft)
 ##
-
-## Concept
-The goal of this project is to develop a mobile and web application that allows users to link their Spotify accounts, search for a desired song, and sing along to the lyrics as they appear on the screen.
-
 ## Curent Working Demo:
-https://youtu.be/69T9d2Ni26c
+https://youtu.be/CEyYxzh0lBI
+
+## Description
+Spotify Karaoke is an android application that utilizes the Spotify API to allow users to link their Spotify accounts and sing along to the lyrics to any song they're listening to as they appear on the the screen. 
 
 ### App Screens
 - Sign In Screen
@@ -28,14 +27,16 @@ https://youtu.be/69T9d2Ni26c
 - The user will be able to play, pause, and skip to anywhere in the song being played 
 - When the user ends the song or hits the back button, they will be taken back to the song selection screen where they can choose another song or log out of the application
 
-
 ## Figma Prototype 
 #### [UI/UX Implementation](https://www.figma.com/file/HyXK3TU3Dv6faWwYbkN3v8/Spotify-Karaoke-App)
 - The prototype shows a mockup of the different screens the project aims to display
 - Click play on the top right to navigate through
 
-## Proposed APIs
+## Resources 
+#### [Android SDK QuickStart](https://developer.spotify.com/documentation/android/quick-start/)
+#### [Spotify Web API Tutorial](https://developer.spotify.com/documentation/web-api/quick-start/)
+#### [Spotify Web API for Android](https://github.com/kaaes/spotify-web-api-android)
+#### [Spotify Web API Android Client - API Reference](https://kaaes.github.io/spotify-web-api-android/javadoc/index.html?kaaes/spotify/webapi/android/SpotifyService.html)
 #### [Spotify API](https://developer.spotify.com/documentation/web-api/)
-#### [Genius API](https://docs.genius.com/)
 #### [LyricsGenius API](https://lyricsgenius.readthedocs.io/en/master/)
 #### [Audio DB API](https://rapidapi.com/theaudiodb/api/theaudiodb) 
